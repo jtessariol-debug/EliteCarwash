@@ -5,53 +5,55 @@ export type SiteImage = {
   height: number
 }
 
+const imagePath = (filename: string) => `${import.meta.env.BASE_URL}images/${filename}`
+
 export const images = {
   logo: {
-    src: '/images/elite-logo.jpg',
+    src: imagePath('elite-logo.jpg'),
     alt: 'Logo de Elite Car Wash',
     width: 640,
     height: 640,
   },
   hero: {
-    src: '/images/hero-car-natural.jpg',
+    src: imagePath('hero-car-natural.jpg'),
     alt: 'Trabajador lavando una SUV blanca con espuma en un car wash',
     width: 1774,
     height: 887,
   },
   services: {
     wash: {
-      src: '/images/service-wash-natural.jpg',
+      src: imagePath('service-wash-natural.jpg'),
       alt: 'Lavado manual con espuma de un vehículo',
       width: 1400,
       height: 933,
     },
     interior: {
-      src: '/images/service-interior-natural.jpg',
+      src: imagePath('service-interior-natural.jpg'),
       alt: 'Limpieza con aspiradora del interior de un vehículo',
       width: 1400,
       height: 933,
     },
     detailing: {
-      src: '/images/service-detailing-natural.jpg',
+      src: imagePath('service-detailing-natural.jpg'),
       alt: 'Trabajador dando terminación a la pintura de un sedán',
       width: 1400,
       height: 933,
     },
     treatments: {
-      src: '/images/service-treatment-natural.jpg',
+      src: imagePath('service-treatment-natural.jpg'),
       alt: 'Limpieza profesional del motor de un vehículo',
       width: 1400,
       height: 933,
     },
   },
   promotion: {
-    src: '/images/promotion-cubetazo-user-v2.jpg',
+    src: imagePath('promotion-cubetazo-user-v2.jpg'),
     alt: 'Cubeta con cervezas Presidente Light para los Domingos de Cubetazo',
     width: 1200,
     height: 1200,
   },
   experience: {
-    src: '/images/experience-elite-natural.jpg',
+    src: imagePath('experience-elite-natural.jpg'),
     alt: 'Vehículo atendido mientras una cliente espera en un ambiente cómodo',
     width: 1536,
     height: 1024,
@@ -62,11 +64,11 @@ export const images = {
 // Al conservar las mismas propiedades, ningún componente necesita ser modificado.
 export const galleryImages: SiteImage[] = [
   images.services.wash,
-  { src: '/images/gallery-foam-natural.jpg', alt: 'Espuma sobre una SUV durante el lavado', width: 1400, height: 933 },
+  { src: imagePath('gallery-foam-natural.jpg'), alt: 'Espuma sobre una SUV durante el lavado', width: 1400, height: 933 },
   images.services.interior,
-  { src: '/images/gallery-wheel-natural.jpg', alt: 'Lavado detallado de aro y neumático', width: 1024, height: 1536 },
+  { src: imagePath('gallery-wheel-natural.jpg'), alt: 'Lavado detallado de aro y neumático', width: 1024, height: 1536 },
   images.services.detailing,
-  { src: '/images/gallery-sedan-natural.jpg', alt: 'Sedán azul limpio después del lavado', width: 1400, height: 933 },
+  { src: imagePath('gallery-sedan-natural.jpg'), alt: 'Sedán azul limpio después del lavado', width: 1400, height: 933 },
   images.services.treatments,
   images.experience,
 ]
